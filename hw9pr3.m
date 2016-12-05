@@ -10,7 +10,7 @@ H1 = (1-z.^-10);
 figure(1)
 plot(w, abs(H1));
 xlim([0 pi]);
-title('Gain')
+title('Standard Comb Filter Gain')
 xlabel('w (rad/s)')
 ylabel('|H(z)|')
 
@@ -24,6 +24,6 @@ H2 = H2/(abs(H2(2)));
 figure(2)
 plot(w, abs(H2));
 xlim([0 pi]);
-title('Gain')
+title('Modified Comb Filter Gain')
 xlabel('w (rad/s)')
 ylabel('|H(z)|')

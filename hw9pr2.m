@@ -17,14 +17,14 @@ H1 = wc^4./(t0.*t1.*t2.*t3);
 
 figure(1)
 plot(f,abs(H1))
-title('Gain')
+title('Ideal Resistor Value Gain')
 xlabel('f (Hz)')
 ylabel('|H(j\omega)|')
 
 %% Part E
 
 CI1  = 0.22e-6; CI2  = 0.1e-6;
-CII1 = 0.22e-6; CII2 = 0.1e-6;
+CII1 = 1e-6;    CII2 = 0.1e-6;
 
 % Calculate ideal resistor values.
 [RI1i, RI2i]   = skdesign(wc, CI1,  CI2,  7*pi/8);
@@ -42,6 +42,6 @@ H2   = H2I.*H2II;
 
 figure(2)
 plot(f,abs(H2))
-title('Gain')
+title('Standard Resistor Value Gain')
 xlabel('f (Hz)')
 ylabel('|H(j\omega)|')
