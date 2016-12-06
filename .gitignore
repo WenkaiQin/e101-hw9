@@ -4,3 +4,6 @@
 
 # images #
 *.png
+
+# tmp #
+*.tmp
