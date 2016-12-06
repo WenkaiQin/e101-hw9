@@ -12,7 +12,7 @@ plot(w, abs(H1));
 xlim([0 pi]);
 title('Standard Comb Filter Gain')
 xlabel('w (rad/s)')
-ylabel('|H(z)|')
+ylabel('|H_{comb}(e^{j\omega})|')
 
 %% Part H
 
@@ -34,7 +34,7 @@ plot(w, abs(H2));
 xlim([0 pi]);
 title('Modified Comb Filter Gain')
 xlabel('w (rad/s)')
-ylabel('|H(z)|')
+ylabel('|H_{modified_comb}(e^{j\omega})|')
 
 %% Part I
 
@@ -47,4 +47,7 @@ h = conv(conv(v1,v2), conv(v3, v4));
 
 figure(3)
 stem(h)
+title('Impulse Response of the Modified Filter')
+xlabel('n = 0...8')
+ylabel('h_{modified_comb}[n]')
 xlim([0 9])

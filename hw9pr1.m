@@ -19,12 +19,11 @@ P1 = abs(X(1:L/2));
 
 figure(2)
 f = Fs*(0:L/2-1)/L;
-plot(f, P1)
-title('DFT')
-xlabel('f (Hz)')
-ylabel('|P1(f)|')
+plot(0:1:499, P1)
+title('One-Sided DFT Magnitude')
+xlabel('m = 0...499')
+ylabel('|X(m)|')
 
-N = 1000/106.5;
 %% Part B
 M = 500;
 n = -M:M-1;
@@ -35,10 +34,10 @@ XW = 1/L*fft(xw);
 Pw = abs(XW(1:L/2));
 
 figure(3)
-plot(f, Pw)
-title('DFT')
-xlabel('f (Hz)')
-ylabel('|P1(f)|')
+plot(0:1:499, P1)
+title('One-Sided DFT Magnitude')
+xlabel('m = 0...499')
+ylabel('|X_{Hann}(f)|')
 
 %% Part C
 A = max(x);

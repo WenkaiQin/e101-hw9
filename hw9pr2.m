@@ -16,10 +16,11 @@ t3 = 1j*w - wc*exp(1j*(11*pi/8));
 H1 = wc^4./(t0.*t1.*t2.*t3);
 
 figure(1)
-plot(f,abs(H1))
+loglog(f,abs(H1))
 title('Ideal Resistor Value Gain')
 xlabel('f (Hz)')
-ylabel('|H(j\omega)|')
+ylabel('|H(j2\pif)|')
+xlim([0 20])
 
 %% Part E
 
@@ -41,7 +42,8 @@ H2   = H2I.*H2II;
 
 
 figure(2)
-plot(f,abs(H2))
+loglog(f,abs(H2))
 title('Standard Resistor Value Gain')
 xlabel('f (Hz)')
-ylabel('|H(j\omega)|')
+ylabel('|H(j2\pif)|')
+xlim([0 20])
